@@ -1,0 +1,14 @@
+from manim import *
+class Tem(Scene):
+    def construct(self):
+
+        #机器人
+        sbig=Ellipse(width=5, height=4.5, color=BLUE, fill_opacity=0.5)
+        csmall1=Ellipse(width=1, height=2, color=WHITE, fill_opacity=0.5).move_to((LEFT+UP)*0.5)
+        csmall2=Ellipse(width=0.1, height=0.2, color=BLACK, fill_opacity=0.5).move_to((LEFT+UP)*0.5)
+        csmall3=csmall1.copy().move_to((RIGHT+UP)*0.5)
+        csmall4=csmall2.copy().move_to((RIGHT+UP)*0.5)
+        r=arc = Arc(radius=2, start_angle=5*PI/4, angle=PI/2,color=RED).move_to(DOWN)
+        group3=VGroup(sbig,csmall1,csmall2,csmall3,csmall4,r)
+        self.play(Create(group3))
+        self.wait()
