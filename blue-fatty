@@ -1,8 +1,6 @@
 from manim import *
 class Tem(Scene):
     def construct(self):
-
-        #机器人
         sbig=Ellipse(width=5, height=4.5, color=BLUE, fill_opacity=0.5)
         csmall1=Ellipse(width=1, height=2, color=WHITE, fill_opacity=0.5).move_to((LEFT+UP)*0.5)
         csmall2=Ellipse(width=0.1, height=0.2, color=BLACK, fill_opacity=0.5).move_to((LEFT+UP)*0.5)
